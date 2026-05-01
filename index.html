@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enso Studio — Backend & Infrastructure Engineering</title>
+    <meta name="description" content="Enso Studio is a backend and infrastructure consultancy based in the EU. Python APIs, AWS, Terraform, Kubernetes, PostgreSQL.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #1a1a18;
+            --paper: #f5f2eb;
+            --stone: #8a8578;
+            --accent: #c4472a;
+            --rule: #d4d0c8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-weight: 300;
+            color: var(--ink);
+            background-color: var(--paper);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 4rem 2rem 6rem;
+        }
+
+        /* --- Enso circle mark --- */
+        .mark {
+            margin-bottom: 3rem;
+        }
+
+        .mark svg {
+            width: 48px;
+            height: 48px;
+        }
+
+        /* --- Header --- */
+        header {
+            margin-bottom: 4rem;
+        }
+
+        header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+        }
+
+        header .tagline {
+            color: var(--stone);
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        /* --- Sections --- */
+        section {
+            margin-bottom: 3.5rem;
+        }
+
+        section h2 {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--stone);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* --- Tech list --- */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.2rem 2rem;
+        }
+
+        .tech-grid dt {
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--stone);
+            padding-top: 1rem;
+            grid-column: 1 / -1;
+        }
+
+        .tech-grid dt:first-child {
+            padding-top: 0;
+        }
+
+        .tech-grid dd {
+            font-size: 0.95rem;
+            padding: 0.15rem 0;
+        }
+
+        /* --- Contact --- */
+        .contact-line {
+            font-size: 1rem;
+        }
+
+        .contact-line a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        .contact-line a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        /* --- Footer --- */
+        footer {
+            margin-top: 5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--rule);
+            color: var(--stone);
+            font-size: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 520px) {
+            html { font-size: 16px; }
+            .page { padding: 3rem 1.5rem 4rem; }
+            header h1 { font-size: 2rem; }
+            .tech-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Fade in */
+        .page {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <!-- Enso circle mark -->
+        <div class="mark">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 24 4 C 12.954 4 4 12.954 4 24 C 4 35.046 12.954 44 24 44 C 35.046 44 44 35.046 44 24 C 44 17.5 41 12 36.5 8.5"
+                      fill="none"
+                      stroke="var(--ink)"
+                      stroke-width="2.5"
+                      stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <header>
+            <h1>Enso Studio</h1>
+            <p class="tagline">Backend & infrastructure engineering, on contract.</p>
+        </header>
+
+        <section>
+            <h2>About</h2>
+            <p>Enso Studio is a one-person consultancy based in the EU. I help companies own their backend and infrastructure without hiring full-time — Python and Java APIs, cloud infrastructure, CI/CD pipelines, and database systems.</p>
+            <p>I work as an embedded part of your team, typically 8–16 hours per week, handling the kind of work where you need someone who understands the full stack from application code through to production infrastructure. Happy to be the person your team pings when something is broken and nobody knows why.</p>
+        </section>
+
+        <section>
+            <h2>Services</h2>
+            <p>API development and maintenance — Flask, FastAPI, Django, Spring Boot. Database design and optimization with PostgreSQL and Redis.</p>
+            <p>Cloud infrastructure and DevOps — AWS (ECS Fargate, VPC, IAM, and more), Terraform, Kubernetes, DigitalOcean. From architecture to day-to-day operations.</p>
+            <p>CI/CD and delivery — GitLab CI, GitHub Actions. Build, test, and deploy pipelines that your team can rely on.</p>
+            <p>Cloud migrations — Experience migrating workloads between AWS, Azure, and DigitalOcean in both directions.</p>
+            <p>Legacy systems — Taking ownership of systems that nobody else wants to touch but everyone depends on.</p>
+        </section>
+
+        <section>
+            <h2>Technologies</h2>
+            <dl class="tech-grid">
+                <dt>Languages</dt>
+                <dd>Python</dd>
+                <dd>Java</dd>
+
+                <dt>Frameworks</dt>
+                <dd>Flask</dd>
+                <dd>FastAPI</dd>
+                <dd>Django</dd>
+                <dd>Spring Boot</dd>
+
+                <dt>Databases</dt>
+                <dd>PostgreSQL</dd>
+                <dd>Redis</dd>
+                <dd>Kafka</dd>
+
+                <dt>Infrastructure</dt>
+                <dd>AWS</dd>
+                <dd>Terraform</dd>
+                <dd>Kubernetes</dd>
+                <dd>Docker</dd>
+                <dd>DigitalOcean</dd>
+                <dd>Linux</dd>
+
+                <dt>CI/CD</dt>
+                <dd>GitLab CI</dd>
+                <dd>GitHub Actions</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h2>Availability</h2>
+            <p>Currently accepting 1–2 new clients for part-time contract work (8–16 hours/week). Based in EET (UTC+2/+3) with comfortable overlap for both EU and US Eastern teams. I invoice through a registered EU company in EUR or USD.</p>
+        </section>
+
+        <section>
+            <h2>Get in touch</h2>
+            <p class="contact-line" id="contact">
+                <!-- Email assembled via JS to deter scrapers -->
+                <noscript>Enable JavaScript to see the email address, or find us on LinkedIn.</noscript>
+            </p>
+        </section>
+
+        <footer>
+            <span>Enso Studio</span>
+            <span>ensostudio.dev</span>
+        </footer>
+
+    </div>
+
+    <script>
+        // Assemble email in JS to avoid scraper harvesting from raw HTML
+        (function() {
+            var u = 'hello';
+            var d = 'ensostudio';
+            var t = 'dev';
+            var addr = u + '@' + d + '.' + t;
+            var el = document.getElementById('contact');
+            var a = document.createElement('a');
+            a.href = 'mai' + 'lto:' + addr;
+            a.textContent = addr;
+            el.appendChild(document.createTextNode('Write to '));
+            el.appendChild(a);
+            el.appendChild(document.createTextNode(' — we read every message.'));
+        })();
+    </script>
+</body>
+</html>
